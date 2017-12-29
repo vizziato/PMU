@@ -1,0 +1,74 @@
+/* #994023904 */
+_oEa.website("pmu");
+var _EaCP = {"cgip" : _oEa.hcgi
+,"tp":{"":""}
+};
+_oEa.jsbwr = {
+ 's'   : '//spa56c.eolcdn.com/ea-misc/js/w.js', /* DomWrite */
+ 'pre' : function(){ _oEaDWR.capture(); },
+ 'post': function(){ _oEaDWR.render(_oEa.b); }
+};
+if (typeof _oEa.gloadtimeout !== 'function') {
+ _oEa.gloadtimeout = function( to, id, tg ) {};
+}
+_oEa.mtrun = function() {
+/* {ccmt:132,ccmth:162,v:0,hdlr:tag} */
+try{
+/* Img */
+_oEa.gloadtimeout(
+ 5000,
+ "DEQwyRwgEDJm_8YpRfiL.9BY_P8qBwXeh7HfHMdS",
+_oEa.gloadimg("//bat.bing.com/action/0?ti=4000035&Ver=2")
+)
+;
+ /* /mtjs */
+}catch(e){_oEa.log('ETM',e);}
+/* {ccmt:282,ccmth:312,v:0,hdlr:tag} */
+try{
+/* JS */
+ /* !mtembedjs */
+_oEa.gloadtimeout(
+5000,
+"DEQwyRwgEDJm_8YpRfhnR0oFQYmqYKab28QCH1kr",
+_oEa.gloadjssrc("//static.criteo.net/js/ld/ld.js","","window.criteo_q = window.criteo_q || [];\n"+
+"window.criteo_q.push(  \n"+
+"        { event: \"setAccount\", account: 9516 },\n"+
+"        { event: \"setSiteType\", type: \"d\" },\n"+
+"        { event: \"viewHome\", type_hp: \"turf\",user_log: \"non_identifie\" }\n"+
+");")
+);
+ /* /!mtembedjs */
+ /* /mtjs */
+}catch(e){_oEa.log('ETM',e);}
+/* {ccmt:412,ccmth:442,v:0,hdlr:tag} */
+try{
+/* JS */
+ /* !mtjssrc */
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '701250323256148');
+fbq('track', "PageView");
+ /* /!mtembedjs */
+ /* /mtjs */
+}catch(e){_oEa.log('ETM',e);}
+/* {ccmt:552,ccmth:582,v:0,hdlr:tag} */
+try{
+/* JS */
+ /* !mtembedjs */
+_oEa.gloadtimeout(
+5000,
+"DEQwyRwgEDJm_8YpRfiEVjLIXhE32owXfhxHUVEm",
+_oEa.gloadjssrc("//platform.twitter.com/oct.js","","twttr.conversion.trackPid('l5jhc');")
+);
+ /* /!mtembedjs */
+ /* /mtjs */
+}catch(e){_oEa.log('ETM',e);}
+/* {ccmt:1411,ccmth:1441,v:0,hdlr:tag} */
+try{
+/* Native */
+_oEa.gloadtimeout(5000,"8lL.QlYVeQ7BL6AqQORYhjKnmfxt2QZPKgOv6CrsXA--",_oEa.gloadimg("https://cm.g.doubleclick.net/pixel?google_nid=eulerian_dmp&google_cm&ethost=eule1.pmu.fr&etws=pmu"));
+ /* /mtjs */
+}catch(e){_oEa.log('ETM',e);}
+};
+_oEa.mtrun();
+_oEa.websiteend();
+ /* end !config */

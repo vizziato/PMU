@@ -1,0 +1,14 @@
+/*<!--*/(function() {var qss="&cb="+Math.floor(99999999999*Math.random());try{qss+="&ref="+encodeURIComponent(document.referrer)}catch(e$$12){}try{qss+="&sc_r="+encodeURIComponent(screen.width+"x"+screen.height)}catch(e$$13){}try{qss+="&sc_d="+encodeURIComponent(screen.colorDepth)}catch(e$$14){}
+var callDis=function(c,d){var a=function(){callDisInternal(c,d)};"complete"===document.readyState?setTimeout(a):window.addEventListener?window.addEventListener("load",a,!1):window.attachEvent("onload",a)},disCalled=!1,callDisInternal=function(c,d){if(!disCalled){disCalled=!0;var a="//"+d+"/dis/dis.aspx",b=document.createElement("iframe");b.width=b.height="0";b.style.display="none";b.src=(a+"?p="+c+qss).substring(0,2E3);(a=document.getElementById("criteoTagsContainer"))?a.appendChild(b):criteo_q.push({event:"appendTag",
+element:b})}};
+
+callDis(9516, 'dis.eu.criteo.com');
+callDis(34516, 'dis.eu.criteo.com');
+})();
+(function() {var callDestination=function(){return function b(e,c,d){var a=new Image(1,1);typeof c===typeof b&&(a.onload=function(){a.onload=null;a.onerror=null;c()});typeof d===typeof b&&(a.onerror=function(){a.onload=null;a.onerror=null;d()});a.src=e}}();
+var cto_fw_url = '//er2d2.criteo.com/criteohandler?cb=94ed5b62dc&ctoUID=ce03c9cc-e643-4356-bc0d-3da10bfbd8e3&v=4.1.0&p0=e%3dvp%26p%3dturf%26user_log%3dnon_identifie%26site_type%3dd%26a%3d9516&p1=e%3dvp%26p%3dturf%26user_log%3dnon_identifie%26site_type%3dd%26a%3d34516&p2=e%3ddis%26a%3d%255B9516%252C34516%255D&adce=1';
+callDestination(cto_fw_url);})();
+
+
+
+/*-->*/
