@@ -11,7 +11,7 @@ from selenium.webdriver.support import expected_conditions as EC
 #url = http://www.letrot.com/stats/fiche-course/2017-02-04/7500/3/resultats/arrivee-definitive#sub_sub_menu_course
 
 
-url_directory = "C:/Users/Giuseppe/Documents/Python/PythonPMU/files_html_recorded_letrot_fr/"
+url_directory = "C:/Users/Giuseppe/Documents/Python/files/files_html_recorded_letrot_fr/"
 anneeArray = [17]
 courseArray = [1,2,3,4,5,6,7,8,9]
 #courseArray = [1]
