@@ -65,15 +65,15 @@ class CsvQuinte:
             #
             # Écriture de la ligne d'en-tête avec le titre
             # des colonnes.
-            writer.writerow( ['Entraineur', 'Autostart', 'Deferre','Favori','Gagnant','Outsider','Record','Gain','Crack','Age','Place','Recul','Sexe','Distance','Driver','Hippodrome','Date'])
+            writer.writerow( ['Entraineur', 'Autostart', 'Deferre','Gagnant','Record','Gain','Crack','Age','Place','Recul','Sexe','Distance','Driver','Hippodrome','Date'])
         
             #
             # Écriture des quelques données.
             for row in range(0,len(self.dicQuinte['Entraineur'])):
-                writer.writerow( [self.dicQuinte['Entraineur'][row], self.dicQuinte['Autostart'][row],self.dicQuinte['Deferre'][row],self.dicQuinte['Favori'][row],
-                                self.dicQuinte['Gagnant'][row],self.dicQuinte['Outsider'][row],self.dicQuinte['Age'][row],self.dicQuinte['Place'][row],self.dicQuinte['Crack'][row],
-                self.dicQuinte['Recul'][row],self.dicQuinte['Sexe'][row],self.dicQuinte['Distance'][row],self.dicQuinte['Driver'][row],
-                self.dicQuinte['Hippodrome'][row],self.dicQuinte['Gain'][row],self.dicQuinte['Record'][row],self.dicQuinte['Date'][row]])
+                writer.writerow( [self.dicQuinte['Entraineur'][row], self.dicQuinte['Autostart'][row],self.dicQuinte['Deferre'][row],
+                                self.dicQuinte['Gagnant'][row],self.dicQuinte['Age'][row],self.dicQuinte['Place'][row],self.dicQuinte['Crack'][row],
+                                self.dicQuinte['Recul'][row],self.dicQuinte['Sexe'][row],self.dicQuinte['Distance'][row],self.dicQuinte['Driver'][row],
+                                self.dicQuinte['Hippodrome'][row],self.dicQuinte['Gain'][row],self.dicQuinte['Record'][row],self.dicQuinte['Date'][row]])
                 #print(self.dicQuinte['Entraineur'][row])
         
         finally:

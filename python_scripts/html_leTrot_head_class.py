@@ -25,7 +25,7 @@ class LeTrotHead:
             if soup.find("div", class_="infos_hippodrome_course"):
                 #regexp_hippodrome= re.search('([a-zé0-9._ ])+',hippodrome.string,re.M|re.I)
                 hippodrome = soup.find("div", class_="infos_hippodrome_course").text
-                regexp_hippodrome= re.search('([a-z ])+',hippodrome,re.M|re.I)
+                regexp_hippodrome= re.search('([a-z])+',hippodrome,re.M|re.I)
                 self.hippodrome =regexp_hippodrome.group()
                 #print('hippodrome dans trothead class:', self.hippodrome)
                 #print('hippodrome dans trothead class:', regexp_hippodrome)
@@ -39,7 +39,12 @@ class LeTrotHead:
             if soup.find("div",class_="date-course"):
                 date = soup.find("div",class_="date-course").text
                 regexp_date= re.search('([^,])+\S+',date,re.M|re.I).group().upper()
-                self.date = re.sub(',',"",regexp_date)
+                regexp_date2 = re.sub(',',"",regexp_date)
+                self.date= re.search('([a-z])+([ ])+([0-9])+([ ])+([a-z])+([ ])+([0-9])+',regexp_date2,re.M|re.I).group()
+                #regexp_date3= re.search('([a-zA-Z])+([0-9])+',regexp_date2,re.M|re.I).group()
+                print('date dans trotClass:',regexp_date)
+                print('date dans trotClass:',regexp_date2)
+                #print('date dans trotClass:',regexp_date3)
 
                 #print('date dans trotClass:',date)
                 #print('date dans trotClass:',regexp_date)

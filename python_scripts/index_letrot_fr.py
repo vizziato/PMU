@@ -57,21 +57,24 @@ print('connection status: ', f.getConnect())
 END CONNECTION TO Firebase **********************************************************************************************************************************
 
 """
-url_directory = "C:/Users/Giuseppe/Documents/Python/PythonPMU/files_html_recorded_letrot_fr/"
-url_default = "C:/Users/Giuseppe/Documents/Python/PythonPMU/files_html_uploader/"
+url_directory = "C:/Users/Giuseppe/Documents/Python/files/files_html_recorded_letrot_fr/"
+url_default = "C:/Users/Giuseppe/Documents/Python/files/files_html_uploader/"
 
 sexe,age,driver,deferre,recul,gagnant,place,record,gain,crack,favori,outsider,entraineur,autostart,longueur,month_temp,hippoArray,dateArray= [],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]
 
 with codecs.open(url_default +'01011001.html', encoding='utf8', errors='replace') as rd:
     defaultFileHtml = rd.read()
 
-anneeArray = [7]
+
+#anneeArray = [17]
+anneeArray = [7,8,9,10,11,12,13,14,15,16,17]
+
 courseArray = [1,2,3,4,5,6,7,8,9]
 #courseArray = [2]
 
 
-for mois in range(1,2):
-    for jour in range(1,3):
+for mois in range(1,13):
+    for jour in range(1,32):
         for annee in anneeArray:
              for course in courseArray:
                 print('course', course)
@@ -88,6 +91,15 @@ for mois in range(1,2):
                                 with codecs.open(url_directory+'letrot_0{0}0{1}20{2}C{3}.html'.format(jour,mois,annee,course), encoding='utf8', errors='replace') as rd:
                                     contenu = rd.read()
                                     print('contenu')
+                            
+                            if annee < 10:
+                                with codecs.open(url_directory+'letrot_0{0}0{1}200{2}C{3}_arrivee.html'.format(jour,mois,annee,course), encoding='utf8', errors='replace') as ad:
+                                    arrivee = ad.read()
+                                    print('arrivee')
+                            else:
+                                with codecs.open(url_directory+'letrot_0{0}0{1}20{2}C{3}_arrivee.html'.format(jour,mois,annee,course), encoding='utf8', errors='replace') as ad:
+                                    arrivee = ad.read()
+                                    print('arrivee')
                            
                         except:
                             print("file dosn't exist")
@@ -104,7 +116,15 @@ for mois in range(1,2):
                             else:
                                 with codecs.open(url_directory+'letrot_0{0}{1}20{2}C{3}.html'.format(jour,mois,annee,course), encoding='utf8', errors='replace') as rd:
                                     contenu = rd.read()
-
+                            
+                            if annee < 10:
+                                with codecs.open(url_directory+'letrot_0{0}{1}200{2}C{3}_arrivee.html'.format(jour,mois,annee,course), encoding='utf8', errors='replace') as ad:
+                                    arrivee = ad.read()
+                                    print('arrivee')
+                            else:
+                                with codecs.open(url_directory+'letrot_0{0}{1}20{2}C{3}_arrivee.html'.format(jour,mois,annee,course), encoding='utf8', errors='replace') as ad:
+                                    arrivee = ad.read()
+                                    print('arrivee')
 
                         except:
                             #print("file dosn't exist")
@@ -121,7 +141,14 @@ for mois in range(1,2):
                                 with codecs.open(url_directory+'letrot_{0}0{1}20{2}C{3}.html'.format(jour,mois,annee,course), encoding='utf8', errors='replace') as rd:
                                     contenu = rd.read()
 
-
+                            if annee < 10:
+                                with codecs.open(url_directory+'letrot_{0}0{1}200{2}C{3}_arrivee.html'.format(jour,mois,annee,course), encoding='utf8', errors='replace') as ad:
+                                    arrivee = ad.read()
+                                    print('arrivee')
+                            else:
+                                with codecs.open(url_directory+'letrot_{0}0{1}20{2}C{3}_arrivee.html'.format(jour,mois,annee,course), encoding='utf8', errors='replace') as ad:
+                                    arrivee = ad.read()
+                                    print('arrivee')
                         except:
                             #print("file dosn't exist")
                             contenu = defaultFileHtml
@@ -131,10 +158,19 @@ for mois in range(1,2):
                         try:
                             if annee < 10:
                                 with codecs.open(url_directory+'letrot_{0}{1}200{2}C{3}.html'.format(jour,mois,annee,course), encoding='utf8', errors='replace') as rd:
-                                contenu = rd.read()
+                                    contenu = rd.read()
                             else:
                                 with codecs.open(url_directory+'letrot_{0}{1}20{2}C{3}.html'.format(jour,mois,annee,course), encoding='utf8', errors='replace') as rd:
-                                contenu = rd.read()
+                                    contenu = rd.read()
+                            
+                            if annee < 10:
+                                with codecs.open(url_directory+'letrot_{0}{1}200{2}C{3}_arrivee.html'.format(jour,mois,annee,course), encoding='utf8', errors='replace') as ad:
+                                    arrivee = ad.read()
+                                    print('arrivee')
+                            else:
+                                with codecs.open(url_directory+'letrot_{0}{1}20{2}C{3}_arrivee.html'.format(jour,mois,annee,course), encoding='utf8', errors='replace') as ad:
+                                    arrivee = ad.read()
+                                    print('arrivee')
 
                         except:
                             #print("file dosn't exist")
@@ -151,82 +187,84 @@ for mois in range(1,2):
                     print('type de course :' ,type_course);
                     print('autostart :' , autostart_search);
                     print('nbpartants :' , nb_partants);
-                   
+                    '''
                     hippodrome_ar,date_ar,type_course_ar,distance_ar,distance_temp_ar,autostart_search_ar,nb_partants_ar  =  LeTrotHead(arrivee).getHead()
                     print('date arrivee :' ,date_ar);
                     print('hippodrome arrivee :' , hippodrome_ar);
                     print('type de course arrivee:' ,type_course_ar);
                     print('autostart arrivve :' , autostart_search_ar);
                     print('nbpartants arrivee:' , nb_partants_ar);
-                    
+                    ''' 
                 except:
                     print('nb partant < 15')
 
                 try:
-                    if hippodrome == hippodrome_ar and date == date_ar and nb_partants == nb_partants_ar:
-                        mareponse =  PartantsAttele(contenu,arrivee,type_course,autostart_search, distance_temp,nb_partants).getQuinte()
-                        print('mareponse:', mareponse)
+                    #mareponse =  PartantsAttele(contenu,arrivee,type_course,autostart_search, distance_temp,nb_partants).getQuinte()
 
-                        type_course1 = (re.search('([a-zA-Z])',type_course,re.M|re.I).group())
-                        #print('type de course 1:', type_course)
+                    #if hippodrome == hippodrome_ar and date == date_ar and nb_partants == nb_partants_ar:
+                    mareponse =  PartantsAttele(contenu,arrivee,type_course,autostart_search, distance_temp,nb_partants).getQuinte()
+                    print('mareponse:', mareponse)
 
-                        if date is not None:
-                            month_temp.append(re.search('([^0-9])\S+',date,re.M|re.I).group() )
+                    type_course1 = (re.search('([a-zA-Z])',type_course,re.M|re.I).group())
+                    #print('type de course 1:', type_course)
 
-                            #hippoArray += [hippodrome,hippodrome,hippodrome,hippodrome,hippodrome]
-                            hippoArray += [hippodrome]*5
-                            #hippoArray.append(hippodrome)*4
-                            #dateArray.insert[date,date,date,date,date]
-                            dateArray += [date]*5
-                            #print('dateArray', dateArray)
-                            #dateArray.append(date)
-                            #print('mois_temp',month_temp)
-                        else:
-                            month_temp.append('Mois')
-                            hippoArray += ['HIPPO','HIPPO','HIPPO','HIPPO','HIPPO']
-                            dateArray += ['DATE','DATE','DATE','DATE','DATE']
-                    
+                    if date is not None:
+                        month_temp.append(re.search('([^0-9])\S+',date,re.M|re.I).group() )
 
-
-                        #month += mareponse['Mois']
-                        #entraineur.append(mareponse['Entraineur'])
-                        entraineur += mareponse['Entraineur']
-                        #autostart.append(mareponse['Autostart'])
-                        autostart += mareponse['Autostart']
-
-                        #deferre.append(mareponse['Deferre'])
-                        deferre += mareponse['Deferre']
-
-                        #record.append(mareponse['Favori'])
-                        record += mareponse['Record']
-
-                        #gagnant.append(mareponse['Gagnant'])
-                        gagnant += mareponse['Gagnant']
-
-                        #outsider.append(mareponse['Outsider'])
-                        gain += mareponse['Gain']
-
-                        #age.append(mareponse['Age'])
-                        age += mareponse['Age']
-
-                        #place.append(mareponse['Place'])
-                        place += mareponse['Place']
-
-                        #recul.append(mareponse['Recul'])
-                        recul += mareponse['Recul']
-
-                        #sexe.append(mareponse['Sexe'])
-                        sexe += mareponse['Sexe']
-
-                        #longueur.append(mareponse['Distance'])
-                        longueur += mareponse['Distance']
-
-                        #crack.append(mareponse['Distance'])
-                        crack += mareponse['Crack']
+                        #hippoArray += [hippodrome,hippodrome,hippodrome,hippodrome,hippodrome]
+                        hippoArray += [hippodrome]*5
+                        #hippoArray.append(hippodrome)*4
+                        #dateArray.insert[date,date,date,date,date]
+                        dateArray += [date]*5
+                        #print('dateArray', dateArray)
+                        #dateArray.append(date)
+                        #print('mois_temp',month_temp)
+                    else:
+                        month_temp.append('Mois')
+                        hippoArray += ['HIPPO','HIPPO','HIPPO','HIPPO','HIPPO']
+                        dateArray += ['DATE','DATE','DATE','DATE','DATE']
+                
 
 
-                        #driver.append(mareponse['Driver'])
-                        driver += mareponse['Driver']
+                    #month += mareponse['Mois']
+                    #entraineur.append(mareponse['Entraineur'])
+                    entraineur += mareponse['Entraineur']
+                    #autostart.append(mareponse['Autostart'])
+                    autostart += mareponse['Autostart']
+
+                    #deferre.append(mareponse['Deferre'])
+                    deferre += mareponse['Deferre']
+
+                    #record.append(mareponse['Favori'])
+                    record += mareponse['Record']
+
+                    #gagnant.append(mareponse['Gagnant'])
+                    gagnant += mareponse['Gagnant']
+
+                    #outsider.append(mareponse['Outsider'])
+                    gain += mareponse['Gain']
+
+                    #age.append(mareponse['Age'])
+                    age += mareponse['Age']
+
+                    #place.append(mareponse['Place'])
+                    place += mareponse['Place']
+
+                    #recul.append(mareponse['Recul'])
+                    recul += mareponse['Recul']
+
+                    #sexe.append(mareponse['Sexe'])
+                    sexe += mareponse['Sexe']
+
+                    #longueur.append(mareponse['Distance'])
+                    longueur += mareponse['Distance']
+
+                    #crack.append(mareponse['Distance'])
+                    crack += mareponse['Crack']
+
+
+                    #driver.append(mareponse['Driver'])
+                    driver += mareponse['Driver']
 
                 except:
                     pass
@@ -299,11 +337,11 @@ for r in range(len(df_csv_propre)):
     df = jockey.DataFrame({'Entraineur': [df_csv_propre.iloc[r].Entraineur],
                            'Autostart':  [df_csv_propre.iloc[r].Autostart],
                             'Deferre':   [df_csv_propre.iloc[r].Deferre],
-                            'Favori': [df_csv_propre.iloc[r].Favori],
+                            #'Favori': [df_csv_propre.iloc[r].Favori],
                             'Record': [df_csv_propre.iloc[r].Record], 
                             'Gain': [df_csv_propre.iloc[r].Gain], 
                             'Gagnant': [df_csv_propre.iloc[r].Gagnant],
-                            'Outsider': [df_csv_propre.iloc[r].Outsider],
+                            #'Outsider': [df_csv_propre.iloc[r].Outsider],
                             'Age': [df_csv_propre.iloc[r].Age],
                             'Place': [df_csv_propre.iloc[r].Place],
                             'Recul': [df_csv_propre.iloc[r].Recul],
